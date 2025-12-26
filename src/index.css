@@ -1,0 +1,198 @@
+:root {
+  --bg-dark: #000000;
+  --bg-card: #111827; /* Dark gray */
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af; /* Light gray */
+  --accent: #3b82f6; /* Blue */
+  --sidebar-width: 250px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pally';
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 80px; /* Mobile width */
+  padding: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: var(--sidebar-width);
+    padding: 5rem;
+  }
+}
+
+/* Typography */
+h1 { font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
+h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+p { color: var(--text-secondary); margin-bottom: 1rem; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* Utilities */
+.text-accent { color: var(--accent); }
+.text-mono { font-family: monospace; }
+.btn-primary {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+.btn-primary:hover { background: rgba(59, 130, 246, 0.1); }
+
+/* Section Utilities */
+.section { margin-bottom: 6rem;
+   scroll-margin-top: 100px;
+   }
+.separator { height: 1px; width: 100px; background-color: #333; display: inline-block; }
+
+/* Experience Timeline */
+.timeline-item {
+  border-left: 2px solid #333;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Grid for Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .project-grid { grid-template-columns: 1fr 1fr; }
+}
+/* --- ANIMATIONS --- */
+
+/* 1. Fade In Up (For Text) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Slide In From Left (For Sidebar) */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 3. Pulse Glow (For Timeline Dots) */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+}
+
+/* --- UTILITY CLASSES --- */
+
+.animate-fade-up {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-sidebar {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Delays: This makes items appear one after another */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Enhanced Timeline Dot */
+.timeline-dot {
+  /* ... existing styles ... */
+  animation: pulseGlow 2s infinite; /* Makes the dot pulse forever */
+}
+/* --- LAYOUT --- */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative; /* Needed for mobile overlay */
+}
+
+/* Mobile: Content takes full width */
+.main-content {
+  margin-left: 0; 
+  padding: 2rem 1.5rem; /* Smaller padding for phones */
+  width: 100%;
+  overflow-x: hidden; /* Prevents side scrolling */
+}
+
+/* Desktop: Content moves right to make room for sidebar */
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: var(--sidebar-width);
+    padding: 5rem;
+  }
+}
+
+/* --- HAMBURGER BUTTON --- */
+.mobile-toggle {
+  display: block;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 200; /* Above everything */
+  background-color: var(--bg-card);
+  border: 1px solid #333;
+  color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-toggle {
+    display: none; /* Hide button on laptop */
+  }
+}
