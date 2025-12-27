@@ -1,4 +1,4 @@
-import Sidebar from "./sidebar.jsx";
+import Sidebar from "./Sidebar.jsx";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
@@ -105,7 +105,7 @@ const itemVariants = {
               </li>
               <li style={{ marginBottom: "0.5rem" }}>
                 Assisted in writing clean, maintainable code using HTML, CSS,
-                and JavaScript.
+                JavaScript and React.
               </li>
               <li>Participated in code reviews and debugging sessions.</li>
             </ul>
