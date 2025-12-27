@@ -123,27 +123,45 @@ const itemVariants = {
           </motion.h2>
 
           <div className="project-grid">
-            <ProjectCard
+         
+            <ProjectCard 
               index={0}
-              title="My Portfolio"
-              description="You are looking at it! A responsive personal site built with React. It features a custom dark mode system and component-based architecture."
-              tags={["React", "CSS3", "Vite"]}
+              title="My Portfolio" 
+              image="src\assets\img\port.png" 
+              link="https://github.com/Tomiwa011/my-portfolio" // <--- Add your real link here
+              description="You are looking at it! A responsive personal site built with React. It features a custom dark mode system and Framer Motion animations." 
+              tags={['React', 'CSS3', 'Vite']} 
             />
 
-            <ProjectCard
+            <ProjectCard 
               index={1}
-              title="Teens Can Code (Internship)"
-              description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment."
-              tags={["HTML5", "JavaScript", "Teamwork"]}
+              title="Teens Can Code (Internship)" 
+              image="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2089&auto=format&fit=full"
+              
+              link="https://github.com/Tomiwa011" // <--- Add real link
+              description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment." 
+              tags={['HTML5', 'JavaScript', 'Teamwork']} 
             />
 
-            <ProjectCard
+            <ProjectCard 
               index={2}
-              title="Upcoming: E-Commerce Store"
-              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management."
-              tags={["Planning", "Frontend Logic"]}
+              title="E-Commerce Store" 
+              image="src\assets\img\cart.png"
+               link="#" // <--- Use # if it's not ready yet
+              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
+              tags={['Planning', 'Frontend Logic']} 
+            />
+            <ProjectCard 
+              index={2}
+              title="E-Commerce Store" 
+              image="src\assets\img\Santiago.png"
+               link="#" // <--- Use # if it's not ready yet
+              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
+              tags={['Planning', 'Frontend Logic']} 
             />
           </div>
+         
+          
         </section>
 
         <footer

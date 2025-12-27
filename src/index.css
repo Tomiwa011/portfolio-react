@@ -92,8 +92,9 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 /* Grid for Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  /* This ensures cards are NEVER smaller than 350px wide */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 2rem;
 }
 @media (min-width: 768px) {
   .project-grid { grid-template-columns: 1fr 1fr; }
