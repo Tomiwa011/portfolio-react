@@ -1,9 +1,9 @@
 import Sidebar from "./Sidebar.jsx";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
-import portImg from './assets/img/port.png';
-import Santiago from './assets/img/Santiago.png';
-import cartImg from './assets/img/cart.png';
+import portImg from "./assets/img/port.png";
+import Santiago from "./assets/img/Santiago.png";
+import cartImg from "./assets/img/cart.png";
 
 function App() {
   const containerVariants = {
@@ -15,17 +15,17 @@ function App() {
       },
     },
   };
-const itemVariants = {
+  const itemVariants = {
     hidden: { scale: 0.8, opacity: 0 },
-    visible: { 
-      scale: 1, 
+    visible: {
+      scale: 1,
       opacity: 1,
-      transition: { 
+      transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10,  // A little wobble at the end
-        mass: 0.5     // Feels lightweight
-      } 
+        damping: 10,
+        mass: 0.5,
+      },
     },
   };
   return (
@@ -126,45 +126,41 @@ const itemVariants = {
           </motion.h2>
 
           <div className="project-grid">
-         
-            <ProjectCard 
+            <ProjectCard
               index={0}
-              title="My Portfolio" 
+              title="My Portfolio"
               image={portImg}
-              link="https://github.com/Tomiwa011/my-portfolio" // <--- Add your real link here
-              description="You are looking at it! A responsive personal site built with React. It features a custom dark mode system and Framer Motion animations." 
-              tags={['React', 'CSS3', 'Vite']} 
+              link="https://github.com/Tomiwa011/my-portfolio"
+              description="You are looking at it! A responsive personal site built with React. It features a custom dark mode system and Framer Motion animations."
+              tags={["React", "CSS3", "Vite"]}
             />
 
-            <ProjectCard 
+            <ProjectCard
               index={1}
-              title="Teens Can Code (Internship)" 
+              title="Teens Can Code (Internship)"
               image="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2089&auto=format&fit=full"
-              
-              link="https://github.com/Tomiwa011" // <--- Add real link
-              description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment." 
-              tags={['HTML5', 'JavaScript', 'Teamwork']} 
+              link="https://github.com/Tomiwa011"
+              description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment."
+              tags={["HTML5", "JavaScript", "Teamwork"]}
             />
 
-            <ProjectCard 
+            <ProjectCard
               index={2}
-              title="E-Commerce Store" 
+              title="E-Commerce Store"
               image={cartImg}
-               link="#" // <--- Use # if it's not ready yet
-              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
-              tags={['Planning', 'Frontend Logic']} 
+              link="https://github.com/Tomiwa011/cart"
+              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management."
+              tags={["Planning", "Frontend Logic"]}
             />
-            <ProjectCard 
+            <ProjectCard
               index={2}
-              title="E-Commerce Store" 
-              image={cartImg}
-               link="#" // <--- Use # if it's not ready yet
-              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
-              tags={['Planning', 'Frontend Logic']} 
+              title="E-Commerce Store"
+              image={Santiago}
+              link="https://github.com/Tomiwa011/rey-clone-bootstrap" // <--- Use # if it's not ready yet
+              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management."
+              tags={["Planning", "Frontend Logic"]}
             />
           </div>
-         
-          
         </section>
 
         <footer
