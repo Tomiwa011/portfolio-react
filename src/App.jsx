@@ -171,7 +171,7 @@ function App() {
             marginTop: "4rem",
           }}
         >
-          <p>Copyright © Ausi Ayooluwatomiwa David</p>
+          <p>Copyright © 2026 Ausi Ayooluwatomiwa David</p>
         </footer>
       </main>
     </div>
