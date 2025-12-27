@@ -149,15 +149,15 @@ function App() {
               title="E-Commerce Store"
               image={cartImg}
               link="https://github.com/Tomiwa011/cart"
-              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management."
+              description="I am currently planning a fully functional shopping cart application to practice advanced React state management."
               tags={["Planning", "Frontend Logic"]}
             />
             <ProjectCard
               index={2}
               title="E-Commerce Store"
               image={Santiago}
-              link="https://github.com/Tomiwa011/rey-clone-bootstrap" // <--- Use # if it's not ready yet
-              description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management."
+              link="https://github.com/Tomiwa011/rey-clone-bootstrap" 
+              description="I am currently planning a fully functional shopping cart application to practice advanced React state management."
               tags={["Planning", "Frontend Logic"]}
             />
           </div>
@@ -171,7 +171,7 @@ function App() {
             marginTop: "4rem",
           }}
         >
-          <p>Designed & Built by Ausi Ayooluwatomiwa David</p>
+          <p>Copyright Ausi Ayooluwatomiwa David</p>
         </footer>
       </main>
     </div>
