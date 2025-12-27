@@ -2,6 +2,8 @@ import Sidebar from "./Sidebar.jsx";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import portImg from './assets/img/port.png';
+import Santiago from './assets/img/Santiago.png';
+import cartImg from './assets/img/cart.png';
 
 function App() {
   const containerVariants = {
@@ -147,7 +149,7 @@ const itemVariants = {
             <ProjectCard 
               index={2}
               title="E-Commerce Store" 
-              image="src\assets\img\cart.png"
+              image={cartImg}
                link="#" // <--- Use # if it's not ready yet
               description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
               tags={['Planning', 'Frontend Logic']} 
@@ -155,7 +157,7 @@ const itemVariants = {
             <ProjectCard 
               index={2}
               title="E-Commerce Store" 
-              image="src\assets\img\Santiago.png"
+              image={cartImg}
                link="#" // <--- Use # if it's not ready yet
               description="I am currently planning a fully functional shopping cart application to practice advanced JavaScript state management." 
               tags={['Planning', 'Frontend Logic']} 
