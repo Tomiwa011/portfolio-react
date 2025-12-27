@@ -1,6 +1,7 @@
 import Sidebar from "./Sidebar.jsx";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import portImg from './assets/img/port.png';
 
 function App() {
   const containerVariants = {
@@ -127,7 +128,7 @@ const itemVariants = {
             <ProjectCard 
               index={0}
               title="My Portfolio" 
-              image="src\assets\img\port.png" 
+              image={portImg}
               link="https://github.com/Tomiwa011/my-portfolio" // <--- Add your real link here
               description="You are looking at it! A responsive personal site built with React. It features a custom dark mode system and Framer Motion animations." 
               tags={['React', 'CSS3', 'Vite']} 
