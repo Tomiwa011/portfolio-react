@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import portImg from "./assets/img/port.png";
 import Santiago from "./assets/img/Santiago.png";
 import cartImg from "./assets/img/cart.png";
+import intern from "./assets/img/intern.jpg";
 
 function App() {
   const containerVariants = {
@@ -138,7 +139,7 @@ function App() {
             <ProjectCard
               index={1}
               title="Teens Can Code (Internship)"
-              image="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2089&auto=format&fit=full"
+              image={intern}
               link="https://github.com/Tomiwa011"
               description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment."
               tags={["HTML5", "JavaScript", "Teamwork"]}
