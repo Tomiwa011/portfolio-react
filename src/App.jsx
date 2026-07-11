@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
@@ -5,8 +6,21 @@ import portImg from "./assets/img/port.png";
 import Santiago from "./assets/img/Santiago.png";
 import cartImg from "./assets/img/cart.png";
 import intern from "./assets/img/intern.jpg";
+import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -16,6 +30,7 @@ function App() {
       },
     },
   };
+
   const itemVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -29,9 +44,10 @@ function App() {
       },
     },
   };
+
   return (
     <div className="app-container">
-      <Sidebar />
+      <Sidebar theme={theme} toggleTheme={toggleTheme} />
 
       <main className="main-content">
         <motion.section
@@ -55,14 +71,21 @@ function App() {
 
           <motion.h2
             variants={itemVariants}
-            style={{ color: "#6b7280", fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+            style={{
+              color: "var(--text-secondary)",
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            }}
           >
             I build things for the web.
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            style={{ maxWidth: "600px", fontSize: "1.1rem" }}
+            style={{
+              maxWidth: "600px",
+              fontSize: "1.1rem",
+              color: "var(--text-secondary)",
+            }}
           >
             I am a Junior Frontend Developer based in Lagos, Nigeria. I
             specialize in building exceptional digital experiences using{" "}
@@ -100,7 +123,7 @@ function App() {
               style={{
                 listStyle: "disc",
                 marginLeft: "1.5rem",
-                color: "#9ca3af",
+                color: "var(--text-secondary)",
               }}
             >
               <li style={{ marginBottom: "0.5rem" }}>
@@ -157,7 +180,7 @@ function App() {
               index={2}
               title="E-Commerce Store"
               image={Santiago}
-              link="https://github.com/Tomiwa011/rey-clone-bootstrap" 
+              link="https://github.com/Tomiwa011/rey-clone-bootstrap"
               description="I am currently planning a fully functional shopping cart application to practice advanced React state management."
               tags={["Planning", "Frontend Logic"]}
             />
@@ -167,7 +190,7 @@ function App() {
         <footer
           style={{
             textAlign: "center",
-            color: "#4b5563",
+            color: "var(--text-muted)",
             fontSize: "0.8rem",
             marginTop: "4rem",
           }}
