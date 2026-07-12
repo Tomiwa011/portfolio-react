@@ -100,7 +100,7 @@ const Sidebar = ({ theme, toggleTheme }) => {
 
         <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2rem' }}>
           <a href="https://github.com/Tomiwa011" target="_blank" className="nav-link" style={{padding: 0}}><Github size={20} /></a>
-          <a href="#" className="nav-link" style={{padding: 0}}><Linkedin size={20} /></a>
+          <a href="https://www.linkedin.com/in/ayooluwatomiwa-ausi-552364229?" className="nav-link" style={{padding: 0}}><Linkedin size={20} /></a>
           <a href="mailto:tomiwaausi@gmail.com" className="nav-link" style={{padding: 0}}><Mail size={20} /></a>
         </div>
       </aside>
