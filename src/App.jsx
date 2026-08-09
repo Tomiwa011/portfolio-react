@@ -17,6 +17,7 @@ import typescript from "./assets/img/typescript.jpg";
 import git from "./assets/img/Git.png";
 import github from "./assets/img/github.png";
 import me from "./assets/img/me.jpeg";
+import resume from "./assets/img/resume.pdf";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -114,6 +115,10 @@ function App() {
             <motion.div variants={itemVariants}>
               <a href="mailto:tomiwaausi@gmail.com" className="btn-primary">
                 Get In Touch
+              </a>
+              {" "}
+              <a href={resume} download="resume.pdf" className="btn-primary">
+                Download CV
               </a>
             </motion.div>
           </motion.section>
@@ -307,8 +312,8 @@ function App() {
             <span className="text-accent">03.</span> Skills And Technologies
             <span className="separator"></span>
           </h2>
-          <div className="skills-container">
-            <div className="skillsImgCont flex gap-5 flex-wrap">
+          <div className="skills-container ">
+            <div className="skillsImgCont justify-center flex gap-5 flex-wrap">
               <div className="imgCard">
                 <motion.div
                   transition={{ duration: 0.5 }}
@@ -318,7 +323,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 overflow-hidden bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center overflow-hidden bg-base-100 shadow-lg"
                 >
                   <img src={tailwind} width="185px" alt="" />
                 </motion.div>
@@ -332,7 +337,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
                 >
                   <img src={nextJs} alt="" width="185px" />
                 </motion.div>
@@ -346,7 +351,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
                 >
                   <img src={github} alt="" width="185px" />
                 </motion.div>
@@ -360,7 +365,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
                 >
                   <img src={typescript} alt="" width="185px" />
                 </motion.div>
@@ -374,7 +379,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center   bg-base-100 shadow-lg"
                 >
                   <img src={git} alt="" width="185px" />
                 </motion.div>
@@ -388,7 +393,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center bg-base-100 shadow-lg"
                 >
                   <img src={css} alt="" width="185px" />
                 </motion.div>
@@ -402,7 +407,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
                 >
                   <img src={html} alt="" width="185px" />
                 </motion.div>
@@ -416,7 +421,7 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center   bg-base-100 shadow-lg"
                 >
                   <img src={vercel} alt="" width="185px" />
                 </motion.div>
@@ -430,9 +435,23 @@ function App() {
                     boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
                   }}
                   style={{ padding: "2rem" }}
-                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
                 >
                   <img src={react} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  bg-base-100 shadow-lg"
+                >
+                  <img src={javaScript} alt="" width="185px" />
                 </motion.div>
               </div>
             </div>
