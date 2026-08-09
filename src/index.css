@@ -11,7 +11,12 @@
   --border-color: rgba(148, 163, 184, 0.25);
   --sidebar-width: 250px;
   --shadow-sm: 0 10px 30px rgba(2, 6, 23, 0.25);
-  --body-bg: radial-gradient(circle at top, #111827 0%, #020617 55%, #000000 100%);
+  --body-bg: radial-gradient(
+    circle at top,
+    #111827 0%,
+    #020617 55%,
+    #000000 100%
+  );
 }
 
 :root[data-theme="light"] {
@@ -36,7 +41,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Neco', serif;
+  font-family: "Neco", serif;
 }
 
 body {
@@ -44,7 +49,9 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .app-container {
@@ -60,10 +67,117 @@ body {
   overflow-x: hidden;
 }
 
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: calc(100vh - 4rem);
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hero-copy {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-frame {
+  position: relative;
+  width: min(72vw, 360px);
+  aspect-ratio: 1;
+  padding: 0.8rem;
+  border-radius: 40% 40% 42% 42% / 38% 38% 46% 46%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(59, 130, 246, 0.18),
+    rgba(15, 23, 42, 0.08)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 0 25px rgba(59, 130, 246, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
+}
+
+.profile-frame:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 24px 50px rgba(59, 130, 246, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 0 35px rgba(96, 165, 250, 0.28);
+  border-color: rgba(147, 197, 253, 0.9);
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 38% 38% 41% 41% / 36% 36% 45% 45%;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.3s ease;
+}
+
+.profile-frame:hover .profile-image {
+  transform: scale(1.03);
+  filter: saturate(1.08);
+}
+
+@media (max-width: 767px) {
+  .hero-visual {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .main-content {
     margin-left: var(--sidebar-width);
     padding: 5rem;
+  }
+
+  .hero-intro {
+    flex-direction: row;
+    gap: 3rem;
+    min-height: calc(100vh - 10rem);
+  }
+
+  .hero-copy {
+    flex: 1.2;
+    margin-bottom: 0;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex: 0.8;
+    justify-content: flex-end;
+  }
+
+  .profile-frame {
+    width: min(32vw, 400px);
+    border-radius: 40% 40% 42% 42% / 38% 38% 46% 46%;
+  }
+
+  .profile-image {
+    border-radius: 38% 38% 41% 41% / 36% 36% 45% 45%;
   }
 }
 
@@ -265,8 +379,8 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
+  background-color: #73c0fc;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
@@ -280,7 +394,7 @@ a {
   bottom: 2px;
   z-index: 2;
   background-color: #e8e8e8;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .sun svg {
@@ -293,7 +407,7 @@ a {
 }
 
 .moon svg {
-  fill: #73C0FC;
+  fill: #73c0fc;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -302,12 +416,12 @@ a {
   height: 24px;
 }
 
-/* .switch:hover */.sun svg {
+/* .switch:hover */
+.sun svg {
   animation: rotate 15s linear infinite;
 }
 
 @keyframes rotate {
- 
   0% {
     transform: rotate(0);
   }
@@ -317,12 +431,12 @@ a {
   }
 }
 
-/* .switch:hover */.moon svg {
+/* .switch:hover */
+.moon svg {
   animation: tilt 5s linear infinite;
 }
 
 @keyframes tilt {
- 
   0% {
     transform: rotate(0deg);
   }

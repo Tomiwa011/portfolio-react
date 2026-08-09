@@ -6,6 +6,17 @@ import portImg from "./assets/img/port.png";
 import Santiago from "./assets/img/Santiago.png";
 import cartImg from "./assets/img/cart.png";
 import audiophile from "./assets/img/audiophile.png";
+import javaScript from "./assets/img/js.png";
+import react from "./assets/img/reactlogo.webp";
+import tailwind from "./assets/img/tailwind.webp";
+import css from "./assets/img/css.png";
+import html from "./assets/img/html.png";
+import nextJs from "./assets/img/nextjs.jpg";
+import vercel from "./assets/img/vercel.jpg";
+import typescript from "./assets/img/typescript.jpg";
+import git from "./assets/img/Git.png";
+import github from "./assets/img/github.png";
+import me from "./assets/img/me.jpeg";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -49,54 +60,70 @@ function App() {
       <Sidebar theme={theme} toggleTheme={toggleTheme} />
 
       <main className="main-content">
-        <motion.section
-          id="about"
-          className="section"
-          style={{height:'100vh',display:'flex',flexDirection:'column',justifyContent:'center',gap:'1rem' }}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.p variants={itemVariants} className="text-accent text-mono">
-            Hi, my name is
-          </motion.p>
-
-          <motion.h1
-            variants={itemVariants}
-            style={{ fontSize: "clamp(3rem, 5vw, 5rem)" }}
-          >
-            AUSI DAVID.
-          </motion.h1>
-
-          <motion.h2
-            variants={itemVariants}
+        <section className="hero-intro mb-6">
+          <motion.section
+            id="about"
+            className="hero-copy section"
             style={{
-              color: "var(--text-secondary)",
-              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              marginBottom: "5rem",
+              gap: "1rem",
             }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            I build things for the web.
-          </motion.h2>
+            <motion.p variants={itemVariants} className="text-accent text-mono">
+              Hi, my name is
+            </motion.p>
 
-          <motion.p
-            variants={itemVariants}
-            style={{
-              maxWidth: "600px",
-              fontSize: "1.1rem",
-              color: "var(--text-secondary)",
-            }}
-          >
-            I am a Junior Frontend Developer based in Lagos, Nigeria. I
-            specialize in building exceptional digital experiences using{" "}
-            <span className="text-accent">React</span>.
-          </motion.p>
+            <motion.h1
+              variants={itemVariants}
+              style={{ fontSize: "clamp(3rem, 5vw, 5rem)" }}
+            >
+              AUSI DAVID.
+            </motion.h1>
 
-          <motion.div variants={itemVariants}>
-            <a href="mailto:tomiwaausi@gmail.com" className="btn-primary">
-              Get In Touch
-            </a>
-          </motion.div>
-        </motion.section>
+            <motion.h2
+              variants={itemVariants}
+              style={{
+                color: "var(--text-secondary)",
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              }}
+            >
+              I build things for the web.
+            </motion.h2>
+
+            <motion.p
+              variants={itemVariants}
+              style={{
+                maxWidth: "600px",
+                fontSize: "1.1rem",
+                color: "var(--text-secondary)",
+              }}
+            >
+              I am a Frontend Developer based in Lagos, Nigeria. I specialize in
+              building exceptional digital experiences using{" "}
+              <span className="text-accent">JavaScript</span>,
+              <span className="text-accent"> React</span>,
+              <span className="text-accent"> Typescript</span>.
+            </motion.p>
+
+            <motion.div variants={itemVariants}>
+              <a href="mailto:tomiwaausi@gmail.com" className="btn-primary">
+                Get In Touch
+              </a>
+            </motion.div>
+          </motion.section>
+
+          <div className="hero-visual">
+            <div className="profile-frame">
+              <img src={me} alt="Profile" className="profile-image" />
+            </div>
+          </div>
+        </section>
 
         <motion.section
           id="experience"
@@ -111,40 +138,75 @@ function App() {
             <span className="separator"></span>
           </h2>
           <div className="cardCont flex flex-wrap gap-6 justify-center mt-8">
-            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col   w-80 h-fit bg-base-100 shadow-lg">
-              <div style={{marginBottom:'2rem'}} className="card-header ">
+            <motion.div
+              transition={{ duration: 0.5 }}
+              whileHover={{
+                y: -10,
+                borderColor: "var(--accent)",
+                boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+              }}
+              style={{ padding: "2rem", backgroundColor: "var(--bg-card)" }}
+              className="card flex flex-col   w-80 h-fit bg-base-100 shadow-lg"
+            >
+              <div style={{ marginBottom: "2rem" }} className="card-header ">
                 <h3>React Development</h3>
               </div>
               <div className="card-body">
-              <p>
-                Developing scalable single-page applications with API integration and reusable components.
-              </p>
-               
+                <p>
+                  Developing scalable single-page applications with API
+                  integration and reusable components.
+                </p>
               </div>
-            </div>
-            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col  w-80 h-fit bg-base-100 shadow-lg">
-              <div  style={{marginBottom:'2rem'}}  className="card-header">
+            </motion.div>
+            <motion.div
+              transition={{ duration: 0.5 }}
+              whileHover={{
+                y: -10,
+                borderColor: "var(--accent)",
+                boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+              }}
+              style={{ padding: "2rem", backgroundColor: "var(--bg-card)" }}
+              className="card  flex flex-col  w-80 h-fit bg-base-100 shadow-lg"
+            >
+              <div style={{ marginBottom: "2rem" }} className="card-header">
                 <h3>UI Implementation</h3>
               </div>
               <div className="card-body">
-              <p>
-                Converting design files from Figma into pixel-perfect, responsive web interfaces.</p>
-               
+                <p>
+                  Converting design files from Figma into pixel-perfect,
+                  responsive web interfaces.
+                </p>
               </div>
-            </div>
-            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col items-center  w-80 h-fit bg-base-100 shadow-lg">
-              <div  style={{marginBottom:'2rem'}}  className="card-header">
+            </motion.div>
+            <motion.div
+              transition={{ duration: 0.5 }}
+              whileHover={{
+                y: -10,
+                borderColor: "var(--accent)",
+                boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+              }}
+              style={{ padding: "2rem", backgroundColor: "var(--bg-card)" }}
+              className="card flex flex-col items-center  w-80 h-fit bg-base-100 shadow-lg"
+            >
+              <div
+                transition={{ duration: 0.5 }}
+                whileHover={{
+                  y: -10,
+                  borderColor: "var(--accent)",
+                  boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                }}
+                style={{ marginBottom: "2rem" }}
+                className="card-header"
+              >
                 <h3>Performance Optimization</h3>
               </div>
               <div className="card-body">
-              <p>
-                Improving website performance, responsiveness, and accessibility for better user experience.
-              </p>
-               
+                <p>
+                  Improving website performance, responsiveness, and
+                  accessibility for better user experience.
+                </p>
               </div>
-            </div>
-            
-            
+            </motion.div>
           </div>
 
           {/* <div className="timeline-item">
@@ -212,7 +274,14 @@ function App() {
               image={audiophile}
               link="https://audiophile-gilt-eight.vercel.app/"
               description="A responsive e-commerce website built with React and TailwindCSS. It features a shopping cart, product pages, and a checkout process."
-              tags={["HTML5", "JavaScript", "React", "CSS3", "TailwindCSS", "Vercel"]}
+              tags={[
+                "HTML5",
+                "JavaScript",
+                "React",
+                "CSS3",
+                "TailwindCSS",
+                "Vercel",
+              ]}
             />
 
             <ProjectCard
@@ -231,6 +300,142 @@ function App() {
               description="I am currently planning a fully functional shopping cart application to practice advanced React state management."
               tags={["Planning", "Frontend Logic"]}
             />
+          </div>
+        </section>
+        <section id="skills" className="skills">
+          <h2>
+            <span className="text-accent">03.</span> Skills And Technologies
+            <span className="separator"></span>
+          </h2>
+          <div className="skills-container">
+            <div className="skillsImgCont flex gap-5 flex-wrap">
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 overflow-hidden bg-base-100 shadow-lg"
+                >
+                  <img src={tailwind} width="185px" alt="" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={nextJs} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={github} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={typescript} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={git} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={css} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={html} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={vercel} alt="" width="185px" />
+                </motion.div>
+              </div>
+              <div className="imgCard">
+                <motion.div
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    y: -10,
+                    borderColor: "var(--accent)",
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.3)",
+                  }}
+                  style={{ padding: "2rem" }}
+                  className="card flex flex-col items-center  w-80 h-62.25 bg-base-100 shadow-lg"
+                >
+                  <img src={react} alt="" width="185px" />
+                </motion.div>
+              </div>
+            </div>
           </div>
         </section>
 

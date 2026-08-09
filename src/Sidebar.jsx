@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, User, Code, Briefcase, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Mail, User, Code, Briefcase, Menu, X,Star } from 'lucide-react';
 
 const Sidebar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,6 +91,10 @@ const Sidebar = ({ theme, toggleTheme }) => {
             <a href="#projects" className="nav-link" onClick={() => setIsOpen(false)}>
               <Code size={24} />
               <span>Projects</span>
+            </a>
+            <a href="#skills" className="nav-link" onClick={() => setIsOpen(false)}>
+              <Star size={24} />
+              <span>Skills</span>
             </a>
           <label className="switch ">
   <span className="sun">
