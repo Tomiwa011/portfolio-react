@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import portImg from "./assets/img/port.png";
 import Santiago from "./assets/img/Santiago.png";
 import cartImg from "./assets/img/cart.png";
-import intern from "./assets/img/intern.jpg";
-import "./App.css";
+import audiophile from "./assets/img/audiophile.png";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -53,7 +52,7 @@ function App() {
         <motion.section
           id="about"
           className="section"
-          style={{ paddingTop: "4rem" }}
+          style={{height:'100vh',display:'flex',flexDirection:'column',justifyContent:'center',gap:'1rem' }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -108,15 +107,51 @@ function App() {
           transition={{ duration: 0.8 }}
         >
           <h2>
-            <span className="text-accent">01.</span> Where I've Worked
+            <span className="text-accent">01.</span> What I Do
             <span className="separator"></span>
           </h2>
+          <div className="cardCont flex flex-wrap gap-6 justify-center mt-8">
+            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col   w-80 h-fit bg-base-100 shadow-lg">
+              <div style={{marginBottom:'2rem'}} className="card-header ">
+                <h3>React Development</h3>
+              </div>
+              <div className="card-body">
+              <p>
+                Developing scalable single-page applications with API integration and reusable components.
+              </p>
+               
+              </div>
+            </div>
+            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col  w-80 h-fit bg-base-100 shadow-lg">
+              <div  style={{marginBottom:'2rem'}}  className="card-header">
+                <h3>UI Implementation</h3>
+              </div>
+              <div className="card-body">
+              <p>
+                Converting design files from Figma into pixel-perfect, responsive web interfaces.</p>
+               
+              </div>
+            </div>
+            <div style={{padding:'2rem',backgroundColor:'var(--bg-card)'}} className="card flex flex-col items-center  w-80 h-fit bg-base-100 shadow-lg">
+              <div  style={{marginBottom:'2rem'}}  className="card-header">
+                <h3>Performance Optimization</h3>
+              </div>
+              <div className="card-body">
+              <p>
+                Improving website performance, responsiveness, and accessibility for better user experience.
+              </p>
+               
+              </div>
+            </div>
+            
+            
+          </div>
 
-          <div className="timeline-item">
+          {/* <div className="timeline-item">
             <div className="timeline-dot"></div>
-            <h3>Software Engineering Intern</h3>
-            <p className="text-accent text-mono" style={{ fontSize: "0.9rem" }}>
-              Teens Can Code • 2025 (SIWES)
+            <p className="">
+              Building responsive and interactive user interfaces using modern
+              JavaScript frameworks and clean CSS.
             </p>
 
             <ul
@@ -126,17 +161,29 @@ function App() {
                 color: "var(--text-secondary)",
               }}
             >
-              <li style={{ marginBottom: "0.5rem" }}>
-                Collaborated with a team of student developers to build
-                web-based solutions.
+              <li style={{ marginBottom: "0.9rem" }}>
+                <p>React Development </p>
+                <p>
+                  {" "}
+                  Developing scalable single-page applications with API
+                  integration and reusable components.
+                </p>
               </li>
-              <li style={{ marginBottom: "0.5rem" }}>
-                Assisted in writing clean, maintainable code using HTML, CSS,
-                JavaScript and React.
+              <li style={{ marginBottom: "0.9rem" }}>
+                <p>UI Implementation</p>
+                <p>
+                  Converting design files from Figma into pixel-perfect,
+                  responsive web interfaces.
+                </p>
               </li>
-              <li>Participated in code reviews and debugging sessions.</li>
+              <li style={{ marginBottom: "0.9rem" }}>
+                <p>Performance Optimization</p>
+                <p>
+                 Improving website performance, responsiveness, and accessibility for better user experience.
+                </p>
+              </li>
             </ul>
-          </div>
+          </div> */}
         </motion.section>
 
         <section id="projects" className="section">
@@ -161,11 +208,11 @@ function App() {
 
             <ProjectCard
               index={1}
-              title="Teens Can Code (Internship)"
-              image={intern}
-              link="https://github.com/Tomiwa011"
-              description="Collaborated with a team to build web layouts. I learned how to debug JavaScript, manage code versions, and work in a professional dev environment."
-              tags={["HTML5", "JavaScript", "Teamwork"]}
+              title="Audiophile E-Commerce"
+              image={audiophile}
+              link="https://audiophile-gilt-eight.vercel.app/"
+              description="A responsive e-commerce website built with React and TailwindCSS. It features a shopping cart, product pages, and a checkout process."
+              tags={["HTML5", "JavaScript", "React", "CSS3", "TailwindCSS", "Vercel"]}
             />
 
             <ProjectCard
@@ -180,7 +227,7 @@ function App() {
               index={2}
               title="E-Commerce Store"
               image={Santiago}
-              link="https://github.com/Tomiwa011/rey-clone-bootstrap"
+              link="https://rey-clone-bootstrap.vercel.app/"
               description="I am currently planning a fully functional shopping cart application to practice advanced React state management."
               tags={["Planning", "Frontend Logic"]}
             />
