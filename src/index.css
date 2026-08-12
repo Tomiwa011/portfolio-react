@@ -603,6 +603,3 @@ a {
   object-fit: cover;
 }
 
-img[loading="lazy"] {
-  filter: blur(0);
-}
