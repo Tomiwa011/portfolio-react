@@ -134,8 +134,43 @@ body {
 }
 
 @media (max-width: 767px) {
+  .hero-intro {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
   .hero-visual {
-    display: none;
+    display: flex;
+    order: -1;
+    width: 180px;
+    max-width: 180px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-frame {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1;
+    padding: 0.4rem;
+    border-radius: 24px;
+    background: rgba(59, 130, 246, 0.14);
+    border: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+  }
+
+  .profile-frame:hover {
+    transform: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
   }
 }
 
